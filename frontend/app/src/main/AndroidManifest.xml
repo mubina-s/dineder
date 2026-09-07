@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.androidexample"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:label="@string/Menu"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- LOGIN is now launcher (first screen) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Main “Welcome Back / Menu” screen (opened AFTER login) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- the rest of your activities stay the same -->
+        <activity android:name=".UserProfileSettingsActivity" android:exported="false"/>
+        <activity android:name=".SignUpActivity" android:exported="false"/>
+        <activity android:name=".RoleActivity" android:exported="false"/>
+        <activity android:name=".SessionPrefsActivity" android:exported="false"/>
+        <activity android:name=".CreateSessionPrefsActivity" android:exported="false"/>
+        <activity android:name=".SavedSessionPrefsActivity" android:exported="false"/>
+        <activity android:name=".FinalResultsActivity" android:exported="false"/>
+        <activity android:name=".VotingActivity" android:exported="false"/>
+        <activity android:name=".TopChoiceActivity" android:exported="false"/>
+        <activity android:name=".BufferBeforeTopChoiceActivity" android:exported="false"/>
+        <activity android:name=".SwipingActivity" android:exported="false"/>
+        <activity android:name=".RestaurantsActivity" android:exported="true"/>
+        <activity android:name=".UserJoinActivity" android:exported="false"/>
+        <activity android:name=".ReadyUpActivity" android:exported="false"/>
+        <activity android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity android:name=".LoginReviews" android:exported="false"/>
+        <activity android:name=".AppOverview" android:exported="false"/>
+        <activity android:name=".UserHistoryActivity" android:exported="false" />
+
+
+    </application>
+
+
+</manifest>
