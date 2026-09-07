@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="24dp">
+
+    <!-- TITLE -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The votes are coming in..."
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/pink" />
+
+    <!-- SUBTITLE (purely visual) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We’re tallying everyone’s choices.\nHang tight for your top pick!"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="14sp"
+        android:textColor="@color/white" />
+
+    <!-- SPINNER CARD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/loadingSpinner"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculating results..."
+            android:layout_marginTop="18dp"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- SMALL FOOTER HINT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip: Make sure everyone finished voting for the best results."
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/white" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

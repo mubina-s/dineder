@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes or No?"
+        android:textColor="@color/pink"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Completed count row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurants Completed:"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:paddingEnd="8dp"/>
+
+        <TextSwitcher
+            android:id="@+id/completedRestaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <!-- NAME -->
+    <TextSwitcher
+        android:id="@+id/TextSwitcherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/white"/>
+
+    <!-- IMAGE CARD -->
+    <LinearLayout
+        android:id="@+id/imageCard"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@drawable/card_bg"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <!-- Rating -->
+    <TextSwitcher
+        android:id="@+id/TextSwitcherRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <!-- Price -->
+    <TextSwitcher
+        android:id="@+id/TextSwitcherPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/pink"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <!-- Cuisines -->
+    <TextSwitcher
+        android:id="@+id/TextSwitcherCuisines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuisines"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <!-- BUTTON ROW -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/dislike_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Dislike"
+            android:textSize="18sp"
+            android:backgroundTint="@color/pink"
+            android:textColor="@color/black"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/like_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Like"
+            android:textSize="18sp"
+            android:backgroundTint="@color/pink"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

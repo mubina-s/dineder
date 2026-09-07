@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- BACK BUTTON -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User History and Stats"
+            android:textColor="@color/pink"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- HEADER IMAGE -->
+        <ImageView
+            android:id="@+id/imgHeader"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/userhistoryandstats"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/progressHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <!-- EMPTY HISTORY MESSAGE -->
+        <TextView
+            android:id="@+id/tvHistoryEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have no history yet!"
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"/>
+
+        <!-- DIVIDER -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:src="@drawable/pink_divider"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ░▒▓ TOP RESTAURANTS CARD ▓▒░ -->
+        <LinearLayout
+            android:id="@+id/cardTopRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvTopRestaurantsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Restaurants"
+                android:textColor="@color/pink"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvTopRestaurantsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- ░▒▓ RECENTLY LIKED CARD ▓▒░ -->
+        <LinearLayout
+            android:id="@+id/cardRecent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvRecentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recently Liked"
+                android:textColor="@color/pink"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvRecentList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- DIVIDER -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:src="@drawable/pink_divider"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ░▒▓ USER STATS CARD ▓▒░ -->
+        <LinearLayout
+            android:id="@+id/cardStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/tvStatsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Stats"
+                android:textColor="@color/pink"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvStatsEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No stats yet"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvTotalLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Votes:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvTotalDislikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average Rating:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvSessionsJoined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sessions Joined:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvFavoriteCuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite Cuisine: -"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

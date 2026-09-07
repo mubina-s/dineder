@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:backgroundTint="@color/pink"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvChoosePrefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Session Preferences"
+        android:textColor="@color/pink"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvChooseSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create new or use your previously saved settings"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- CREATE NEW -->
+    <Button
+        android:id="@+id/createNewPrefsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Create New Session Preferences"
+        android:backgroundTint="@color/pink"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp" />
+
+    <!-- USE EXISTING -->
+    <Button
+        android:id="@+id/existingPrefsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Use Saved Session Preferences"
+        android:backgroundTint="@color/pink"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

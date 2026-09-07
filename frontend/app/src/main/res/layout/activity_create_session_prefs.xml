@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CreateSessionPrefsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- TOP BAR: BACK BUTTON LEFT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- WELCOME IMAGE -->
+        <ImageView
+            android:id="@+id/imgWelcome"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/welcome_back"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="Welcome back image" />
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tvPrefsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Build Your Session Preferences"
+            android:textColor="@color/pink"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp" />
+
+        <!-- SUBTITLE -->
+        <TextView
+            android:id="@+id/tvPrefsSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save your favorite settings and reuse them later"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="18dp" />
+
+        <!-- CARD CONTAINER -->
+        <LinearLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/card_bg"
+            android:gravity="center_horizontal">
+
+            <!-- NAME -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preference name"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/preference_name_edt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="e.g. Date Night, Family Lunch"
+                android:backgroundTint="@color/pink"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="18dp" />
+
+            <!-- RATING -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minimum rating"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/rating_edt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter rating 1–5"
+                android:inputType="number"
+                android:backgroundTint="@color/pink"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="18dp" />
+
+            <!-- PRICE RANGE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price range"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- "Chips" like real apps -->
+            <LinearLayout
+                android:id="@+id/priceChipsRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/btnPriceCheap"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="$"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/pink"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnPriceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="$$"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/pink"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="6dp" />
+
+                <Button
+                    android:id="@+id/btnPriceExpensive"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="$$$"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/pink"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <!-- Still the same EditText that your Java uses -->
+            <EditText
+                android:id="@+id/price_range_edt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Will be set from buttons above or type manually"
+                android:backgroundTint="@color/pink"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tip: $, $$, $$$ are what the app expects."
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- ACTION BUTTONS -->
+        <Button
+            android:id="@+id/create_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Create"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/pink"
+            android:layout_marginTop="26dp" />
+
+        <Button
+            android:id="@+id/create_switch_saved_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Use Saved Instead"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/pink"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="36dp" />
+
+    </LinearLayout>
+</ScrollView>

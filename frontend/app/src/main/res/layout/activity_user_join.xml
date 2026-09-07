@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:backgroundTint="@color/pink"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join Now!"
+        android:textColor="@color/pink"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the session code shared by your host"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Input Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_bg"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Code"
+            android:textColor="@color/pink"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/join_code_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="e.g. ABCD"
+            android:backgroundTint="@color/pink"
+            android:paddingHorizontal="16dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+    <!-- Join Button -->
+    <Button
+        android:id="@+id/join_join_btn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Join"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/pink"
+        android:textColor="@color/black"
+        android:layout_marginTop="32dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

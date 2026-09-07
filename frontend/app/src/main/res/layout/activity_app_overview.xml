@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="@color/pink"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="App Reviews"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- label + value centered -->
+        <TextView
+            android:text="Total amount of users using this app:"
+            android:textColor="@color/pink"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txtTotalUsers"
+            android:text="N/A"
+            android:textColor="@color/pink"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/appImage"
+            android:layout_width="240dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/app_review_main"
+            android:contentDescription="App illustration"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <!-- Big rating bar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_pink_bg"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:isIndicator="false"
+                android:scaleX="2.0"
+                android:scaleY="2.0"/>
+        </FrameLayout>
+
+        <!-- Input + submit -->
+        <LinearLayout
+            android:id="@+id/inputRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_pink_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/reviewInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="You can type your review here (:"
+                android:inputType="textMultiLine"
+                android:gravity="center_vertical|start"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:minWidth="72dp"
+                android:text="SUBMIT"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- Login/Logout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/black" />
+
+            <Space android:layout_width="8dp" android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGOUT"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Reviews -->
+        <LinearLayout
+            android:id="@+id/reviewsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imgRecommend"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/app_review_bottom"
+            android:contentDescription="Recommend badge"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

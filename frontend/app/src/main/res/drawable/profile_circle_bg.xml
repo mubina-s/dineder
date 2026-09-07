@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Inner fill of the circle -->
+    <solid android:color="@color/black" />
+
+    <!-- Pink border -->
+    <stroke
+        android:width="3dp"
+        android:color="@color/pink" />
+
+    <!-- Extra padding inside the circle -->
+    <padding
+        android:left="6dp"
+        android:top="6dp"
+        android:right="6dp"
+        android:bottom="6dp" />
+</shape>

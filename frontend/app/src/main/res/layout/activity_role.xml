@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="24dp">
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let's Get Started"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/pink" />
+
+    <!-- SUBTITLE -->
+    <TextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Host, join, or check stats for your next food session."
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="14sp"
+        android:textColor="@color/white" />
+
+    <!-- CARD WITH ACTION BUTTONS -->
+    <LinearLayout
+        android:id="@+id/actionsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_bg"
+        android:padding="20dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Host Button -->
+        <Button
+            android:id="@+id/host_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Host a Session"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/pink"
+            android:textColor="@color/black" />
+
+        <!-- Small description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create a new session and share the join code with friends."
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Join Button -->
+        <Button
+            android:id="@+id/join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Join a Session"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/pink"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+        <!-- Small description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter a host's join code to hop into a running session."
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Dashboard Button -->
+        <Button
+            android:id="@+id/dashboard_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Dashboard"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/pink"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+        <!-- Small description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See app stats, trends, and top restaurants."
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

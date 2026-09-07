@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:padding="16dp">
+
+        <!-- TOP BAR: BACK BUTTON -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- OPTIONAL STATS IMAGE / BANNER -->
+        <ImageView
+            android:id="@+id/imgStatsHeader"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/signup_photo"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="Stats illustration" />
+
+        <!-- MAIN TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Stats"
+            android:textColor="@color/pink"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overview of what’s happening in the app right now"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- APP STATS CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginTop="4dp">
+
+            <!-- Small header inside card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App performance"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="4dp" />
+
+            <!-- App Stats Table -->
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:showDividers="middle"
+                android:divider="@android:color/darker_gray"
+                android:dividerPadding="4dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Votes Cast"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/votesCast"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Active Sessions"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/activeSessions"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Active Users"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/activeUsers"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Top Cuisine"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/topCuisine"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+        <!-- RESTAURANT STATS TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Stats"
+            android:textColor="@color/pink"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:paddingTop="24dp"
+            android:paddingBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See what places are trending with your users"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"
+            android:paddingBottom="12dp" />
+
+        <!-- RESTAURANT STATS CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:showDividers="middle"
+                android:divider="@android:color/darker_gray"
+                android:dividerPadding="4dp">
+
+                <!-- Header row -->
+                <TableRow>
+
+                    <TextView
+                        android:text="Trending"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="Recent Votes"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:singleLine="false"
+                        android:ellipsize="none" />
+                </TableRow>
+
+                <!-- Values row -->
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/trendingRestaurant"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/trendingRecentVotes"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <!-- Leaderboard header -->
+                <TableRow>
+
+                    <TextView
+                        android:text="Top Restaurants"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
+                </TableRow>
+
+                <!-- Restaurant rows -->
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/restaurant1"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/score1"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/restaurant2"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/score2"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/restaurant3"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/score3"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="8dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
